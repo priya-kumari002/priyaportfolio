@@ -1,0 +1,454 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: blue;
+    color: #333;
+  }
+  
+  nav {
+    background-color: black; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #logo {
+    height: 30px; 
+  }
+  
+  #logo:hover {
+    filter: brightness(1.2) contrast(1.2); 
+  }
+  
+  #logo:active {
+    filter: brightness(0.8) contrast(0.8);  
+  }
+  
+  #logo {
+    filter: grayscale(100%); 
+    transition: filter 0.3s ease;
+  }
+  
+  #logo:hover {
+    filter: grayscale(0%);  
+  }
+  
+  .portfolio-container {
+    display: flex;
+    width: 100%;
+    background-color: #6c63ff;
+  }
+  
+  .navlist {
+    display: flex;
+    height: 15vh;
+    gap: 3.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+  }
+  
+  .navlist li {
+    list-style: none;
+  }
+  
+  .navlist a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: cyan;
+    position: relative;
+  }
+  
+  .navlist li:hover {
+    color: cyan;
+  }
+  
+  .leftcon, .rightcon {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .leftcon {
+    width: 70%;
+    padding-left: 3rem;
+  }
+  
+  .rightcon {
+    background: linear-gradient(#26252523);
+    width: auto;
+    height: auto;
+  }
+  
+  .icons, .fa-brands {
+    color: #bbb;
+    font-size: 1.7rem;
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .portfolio-container {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    background-color: darkblue;
+  }
+  
+  .portfolio-container:hover {
+    background-color: purple;
+    color: aqua;
+  }
+  
+  .leftcon, .rightcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rightcon:hover {
+    background-color: skyblue;
+  }
+  
+  .leftcon {
+    width: 50%;
+    padding-left: 2rem;
+    height: auto;
+  }
+  
+  .leftcon:hover {
+    background-color: darkolivegreen;
+  }
+  
+  .rightcon {
+    width: 50%;
+    background: linear-gradient(#26252523);
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .icons i {
+    font-size: 2rem;
+    color: #bbb;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icons i:hover {
+    color: blue;
+  }
+  
+  .content {
+    margin-left: 2rem;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    color: cyan;
+  }
+  
+  .content h1:hover {
+    color: cyan;
+  }
+  
+  .content p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .content p:hover {
+    color: cyan;
+  }
+  
+  .btn-container button {
+    border: 0.1rem solid #SDB9EE;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:nth-child(1) {
+    background-color: #262525;
+    color: cyan;
+  }
+  
+  button:nth-child(1):hover {
+    background-color: cyan;
+    color: #262525;
+  }
+  
+  /* Circle Container for Image */
+  .circle {
+    aspect-ratio: 1;
+    border-radius: 100%;
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .circle:nth-child(2) {
+    background-color: white;
+    width: 20rem;  
+    height: 20rem; 
+    border: 4px solid white;
+    background-image: url(PRIYA.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 1rem cyan, 0 0 2rem cyan;
+    transition: transform 0.3s ease;
+  }
+  
+  .circle:nth-child(2):hover {
+    background-color: black;
+    background-image: url(prrr.jpg);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .portfolio-container {
+      flex-direction: column;
+      height: fit-content;
+    }
+  
+    .leftcon, .rightcon {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .icons i {
+      font-size: 1.5rem;
+    }
+  
+    .circle {
+      width: 12rem;
+      height: 12rem;
+      top: 20%;
+      left: 50%;
+      position: relative;
+    }
+  
+    .circle:nth-child(2) {
+      width: 16rem;
+      height: 16rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navlist {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .portfolio-container {
+      flex-direction: column;
+      height: fit-content;
+    }
+  
+    .leftcon, .rightcon {
+      width: 100%;
+      padding: 1rem;
+      justify-content: center;
+    }
+  
+    .content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .icons i {
+      font-size: 1.5rem;
+    }
+  
+    .circle {
+      width: 10rem;
+      height: 10rem;
+      top: 20%;
+      left: 50%;
+      position: relative;
+    }
+  
+    .circle:nth-child(2) {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navlist {
+      font-size: 0.9rem;
+    }
+  
+    .portfolio-container {
+      flex-direction: column;
+    }
+  
+    .leftcon, .rightcon {
+      height: auto;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .content h1 {
+      font-size: 2rem;
+    }
+  
+    .content p {
+      font-size: 1rem;
+    }
+  
+    .icons i {
+      font-size: 1.2rem;
+    }
+  
+    .circle {
+      width: 8rem;
+      height: 8rem;
+      top: 10%;
+      left: 50%;
+      position: relative;
+    }
+  
+    .circle:nth-child(2) {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .skills-heading {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .progress-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skill-bar {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar-wrapper {
+    background: black;
+    border-radius: 8px;
+    height: 15px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    background: #4caf50;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-container {
+      padding: 10px;
+    }
+  
+    .skill-bar {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-heading {
+      font-size: 1.5em;
+    }
+  
+    .skill-bar {
+      width: 100%;
+    }
+  }
+  
+  /* Footer Section */
+  .footercontainer {
+    background-color: gray;
+    color: #fff;
+    padding: 30px 20px;
+    width: auto;
+  }
+  
+  .footercontainer .socialicons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footercontainer .socialicons a {
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footercontainer .socialicons a:hover {
+    transform: translateY(-5px);
+  }
+  
+  .footerbottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footerbottom p {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .footerbottom span {
+    color: hwb(350 8% 11%);
+  }
+  
+  @media (max-width: 768px) {
+    .footercontainer .socialicons {
+      justify-content: center;
+    }
+  
+    .footerbottom p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footercontainer .socialicons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
